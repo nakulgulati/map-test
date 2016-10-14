@@ -1,0 +1,48 @@
+{
+  "name": "ionic-hello-world",
+  "description": "map-test: An Ionic project",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "build": "ionic-app-scripts build",
+    "watch": "ionic-app-scripts watch",
+    "serve:before": "watch",
+    "emulate:before": "build",
+    "deploy:before": "build",
+    "build:before": "build",
+    "run:before": "build"
+  },
+  "dependencies": {
+    "ionic-angular": "2.0.0-rc.0",
+    "ionicons": "3.0.0",
+    "@ionic/storage": "1.0.3",
+    "ionic-native": "2.0.3"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "0.0.31",
+    "typescript": "^2.0.3"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard",
+    {
+      "id": "com.googlemaps.ios",
+      "locator": "https://bitbucket.org/nightstomp/cordova-plugin-googlemaps-sdk.git"
+    },
+    {
+      "id": "cordova-plugin-googlemaps",
+      "locator": "https://github.com/phonegap-googlemaps-plugin/cordova-plugin-googlemaps",
+      "variables":{
+        "API_KEY_FOR_IOS": "AIzaSyAqITjVkso76dwEOLX3vWEOc1KLwOK_5Ms"
+      }
+    }
+  ],
+  "cordovaPlatforms": [
+    "ios"
+  ]
+}
